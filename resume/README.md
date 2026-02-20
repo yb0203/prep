@@ -32,6 +32,7 @@ experience/
     finacle-api-automation.md
 projects/
   projects.tex
+  projects.md
   gitabae/
     gitabae.tex
     gitabae.md
