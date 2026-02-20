@@ -1,0 +1,49 @@
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{geometry}
+\usepackage{fontspec}
+
+% Font: Bitstream Charter (system font via fontspec for XeTeX)
+\setmainfont{Charter}[
+  UprightFont = *-Roman,
+  BoldFont = *-Bold,
+  ItalicFont = *-Italic,
+  BoldItalicFont = *-BoldItalic,
+]
+
+\ifdefined\pdfgentounicode
+  \input{glyphtounicode}
+\fi
+
+% Margin setup
+\geometry{left=1.27cm, top=1.27cm, right=1.27cm, bottom=1.27cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Standardized Section Formatting
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-3pt}]
+
+% ATS Parsing
+\ifdefined\pdfgentounicode
+  \pdfgentounicode=1
+\fi
