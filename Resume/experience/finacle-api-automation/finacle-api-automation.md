@@ -1,6 +1,6 @@
 # Finacle API Automation Framework
 
-> NOTE: This project does not currently have a corresponding .tex block in the resume (it is not listed in experience.tex). This file is retained as supporting context and interview preparation material. If this project is added to the resume in the future, a corresponding .tex file should be created and this note updated.
+> Corresponding tex: N/A — no .tex sub-block exists yet. If this project is added to the resume, create `finacle-api-automation.tex` here and update this line.
 
 ## Context
 
