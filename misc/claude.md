@@ -63,7 +63,7 @@ Or more specific:
 
 **Reference files:**
 - `companies/kayhan-space/conversation_history.md`
-- `technical-topics/databases/README.md`
+- `companies/kayhan-space/README.md`
 
 ---
 
@@ -83,7 +83,7 @@ Or:
 - Prepare you for interview questions
 
 **Reference files:**
-- `technical-topics/[topic]/README.md`
+- `articles/[article-name]/README.md`
 - `projects/geetha-bay/conversation_history.md`
 
 ---
@@ -125,7 +125,7 @@ Or:
 - Follow-up Q&A
 
 **Reference files:**
-- `technical-topics/[topic]/README.md`
+- `articles/[article-name]/README.md`
 - Relevant conversation_history.md files
 
 ---
@@ -463,14 +463,12 @@ These commands reference your interview-prep directory structure:
 
 - **Companies:** `interview-prep/companies/[company]/`
 - **Projects:** `interview-prep/projects/[project]/`
-- **Topics:** `interview-prep/technical-topics/[topic]/`
-- **Learning:** `interview-prep/learning/langchain/`
 - **Articles:** `interview-prep/articles/[article-name]/`
+- **System Design:** `System Design/` (at prep root)
 
 All commands automatically reference the correct documentation.
 
 ### Special Guides
-- **READ Command Guide:** `interview-prep/READ_COMMAND_GUIDE.md` - Complete guide to interactive article reading
 - **Articles Index:** `interview-prep/articles/INDEX.md` - List of available articles for reading sessions
 
 ---
@@ -479,8 +477,7 @@ All commands automatically reference the correct documentation.
 
 ### Essential Files
 - **Master README:** `interview-prep/README.md`
-- **Quick Start:** `interview-prep/QUICK_START.md`
-- **Completion:** `interview-prep/COMPLETION_SUMMARY.md`
+- **Guides:** `interview-prep/docs/`
 
 ### Company Interview
 - **Kayhan Prep:** `interview-prep/companies/kayhan-space/README.md`
@@ -490,12 +487,7 @@ All commands automatically reference the correct documentation.
 - **Geetha Bay:** `interview-prep/projects/geetha-bay/README.md`
 - **MS Teams:** `interview-prep/projects/ms-teams-clone/README.md`
 
-### Technical Topics
-- **Databases:** `interview-prep/technical-topics/databases/README.md`
-- **System Design:** `interview-prep/technical-topics/system-design/README.md`
-
 ### Article Reading (/read Command)
-- **READ Command Guide:** `interview-prep/READ_COMMAND_GUIDE.md`
 - **Articles Index:** `interview-prep/articles/INDEX.md`
 - **System Design Core Concepts:** `interview-prep/articles/system-design-core-concepts/`
 
@@ -551,17 +543,15 @@ Track your progress using these commands:
 
 If you need help:
 1. Check the command reference above
-2. Review `interview-prep/QUICK_START.md`
-3. For `/read` command: See `interview-prep/READ_COMMAND_GUIDE.md`
-4. Read relevant `README.md` files
+2. Review `interview-prep/README.md`
+3. Read relevant `README.md` files
 5. Ask Claude directly about any topic
 
 ## 🚀 Getting Started with /read Command
 
 To start interactive article reading:
 
-1. Read the guide: Open `READ_COMMAND_GUIDE.md`
-2. Try it: Run `/read system-design-core-concepts`
+1. Try it: Run `/read system-design-core-concepts`
 3. Engage: Ask questions and learn conversationally
 4. Track: Your progress is saved in the article directory
 

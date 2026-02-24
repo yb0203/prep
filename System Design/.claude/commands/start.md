@@ -7,7 +7,7 @@ Starts a numbered, session-aware LLD study session. Each run creates a session r
 
 ## Step 1 — Orient
 
-Read `/Users/yashvi/prep/interview-prep/LLD/CLAUDE.md`.
+Read `/Users/yashvi/prep/System Design/CLAUDE.md`.
 
 Count:
 - **Covered topics**: rows where all status cells are `[x]`
@@ -191,5 +191,23 @@ If stop → end session gracefully.
   - Patterns: `patterns/[type]/[name]/Theory.md`, `Practical.md`, `Summary.md`
   - Concepts: `concepts/[name]/Theory.md`, `Practical.md`, `Summary.md`
   - Session reports: `practice/session-N/report.md`
-  - Tracker: `CLAUDE.md` at LLD root
-  - LeetCode problems: `leetcodeproblems.md` at LLD root
+  - Tracker: `CLAUDE.md` at System Design root
+  - LeetCode problems: `leetcodeproblems.md` at System Design root
+
+## TTS-Aware Formatting
+
+This session is voice-driven: user speaks via Wispr, Claude's responses are read aloud via Kokoro TTS. Format ALL spoken output for ears, not eyes.
+
+**During the session conversation:**
+- Use natural prose — no bullet points, no markdown headers, no symbols
+- Spell out pattern/principle names in full on first mention: "the Observer pattern" not "Observer"
+- Phrase questions as clean spoken sentences: "What do you think the Factory pattern is solving?" not a bulleted list of sub-questions
+- Announce transitions naturally: "Let's start with a warmup question." / "Alright, moving on to a new topic."
+- When assessing answers, speak the feedback: "Good, you got the core of it. The one thing you missed was..." not a formatted verdict block
+- Never read file paths or markdown syntax aloud — say "I've saved your notes" not "I've written Theory.md"
+
+**Session announcements (Step 1, Step 4)** should sound natural when spoken:
+- Good: "This is session four. You've covered twelve out of thirty-nine topics so far. Today we'll do one warmup drill on the Strategy pattern, then move on to two new topics."
+- Bad: "**Session 4** — Mixed. Coverage: 12/39 topics complete."
+
+**Files written to disk** (Theory.md, Practical.md, Summary.md, report.md, CLAUDE.md) are exempt — use full markdown there.
