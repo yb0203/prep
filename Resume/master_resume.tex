@@ -1,0 +1,170 @@
+%-------------------------
+% Resume in Latex - Dense SWE/AI Version
+% Font: Charter - 10pt for high density
+%------------------------
+
+\documentclass[a4paper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{geometry}
+\usepackage{charter} 
+
+\input{glyphtounicode}
+
+% Tight Margin setup for dense look
+\geometry{left=1.0cm, top=1.0cm, right=1.0cm, bottom=1.0cm}
+
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Standardized Section Formatting - Compressed
+\titleformat{\section}{
+  \vspace{-12pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
+
+% ATS Parsing
+\pdfgentounicode=1
+
+% Custom Commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1.8pt}}
+  }
+}
+
+\newcommand{\resumeEntryHeading}[3]{
+  \vspace{2pt}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} $|$ \textit{#2} & \small #3 \\
+    \end{tabular*}\vspace{-3pt}
+}
+
+\newcommand{\resumeEducationEntry}[4]{
+  \vspace{2pt}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \small #3 \\
+      \textit{\small #2} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.98\textwidth}{l@{\extracolsep{\fill}}r}
+      \small\textbf{#1} & \small #2 \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{
+  \begin{itemize}[leftmargin=0.15in, label={}, topsep=2pt, partopsep=0pt, itemsep=4pt, parsep=0pt]
+}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+\newcommand{\resumeItemListStart}{\begin{itemize}[topsep=2pt, partopsep=0pt, itemsep=1.5pt, parsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+
+\renewcommand\labelitemi{$\bullet$}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \textbf{Yashvi Bansal}} \\ \vspace{4pt}
+    \small 
+    +91 62831 62131 $|$
+    \href{mailto:bansaly0203@gmail.com}{\underline{bansaly0203@gmail.com}} $|$ 
+    \href{https://linkedin.com/in/yb0203}{\underline{linkedin.com/in/yb0203}} $|$ 
+    \href{https://github.com/yb0203}{\underline{github.com/yb0203}}
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Summary}
+\vspace{2pt}
+\small{Software Engineer with 2+ years of experience delivering scalable banking automation and AI-powered solutions. Specialized in \textbf{LLM engineering, RAG architecture}, and platform automation. Passionate about applying AI and software engineering to solve complex problems and create measurable business impact.}
+
+%-----------SKILLS-----------
+\section{Skills}
+\vspace{2pt}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages \& Frameworks}{: Java, Python, Flask, SQL, C++, HTML, CSS, PostgreSQL, C} \\
+     \textbf{AI \& LLMs}{: LangChain, Vector databases, OpenAI, RAG Architecture, DeepEval, Ollama, Prompt Engineering, Hugging Face, Multi-Agent Framework, AI guardrails} \\
+     \textbf{Core CS}{: Microservices Architecture, RESTful API Design, Distributed Systems, Multithreading, Data Structures \& Algorithms, Object-Oriented Programming (OOP), System Design, Agile/Scrum} \\
+     \textbf{Certifications}{: Hugging Face -- AI Agents; SOLID Principles \& Design Patterns (Java); Design Thinking}
+    }}
+ \end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+  \resumeEntryHeading{Software Development Engineer - 1}{Kotak Mahindra Bank Limited}{Aug 2023 -- Present}
+  \vspace{2pt}
+  \textbf{Automation Infrastructure}
+  \resumeItemListStart
+    \resumeItem{Constructed a \textbf{Java-based API automation framework} for Finacle APIs, embedding core banking business logic end-to-end. Reduced testing time by \textbf{90\%} by encoding domain-specific workflows into reusable automation scripts.}
+    \resumeItem{Designed a \textbf{Gherkin-based BDD framework} translating banking business requirements into executable test scenarios within hours, enabling faster validation of critical financial workflows.}
+    \resumeItem{Engineered \textbf{automated test data generation}, eliminating manual preparation and accelerating QA cycle times significantly. Reduced manual data prep by \textbf{70\%}, enabling test suites to execute faster across all banking modules.}
+    \resumeItem{Developed a \textbf{reusable parameterized CI template stage} for integration testing, deployable across all engineering pipelines. Empowered teams to selectively configure pipeline stages and jobs, standardizing test infrastructure across \textbf{5+ engineering teams} organization-wide.}
+  \resumeItemListEnd
+  \vspace{2pt}
+  \textbf{Centralized Reporting Platforms}
+  \resumeItemListStart
+    \resumeItem{Spearheaded a \textbf{centralized report server} using \textbf{Python and Flask}, automating onboarding for teams across the organization seamlessly. Boosted cross-team visibility and slashed report retrieval time by \textbf{80\%}.}
+    \resumeItem{Pioneered an \textbf{AI-driven bug triage engine} that classifies errors and ranks them by priority automatically. Delivered \textbf{automated root cause analysis} with confidence scores, cutting mean time to resolution significantly.}
+    \resumeItem{Enforced \textbf{clean code practices} and modular architecture, improving maintainability and scalability of the report server codebase, streamlining future enhancements and reducing technical debt.}
+  \resumeItemListEnd
+  \vspace{2pt}
+  \textbf{AI Security Engineering}
+  \resumeItemListStart
+    \resumeItem{Developed an \textbf{LLM evaluation framework} identifying \textbf{8+ OWASP security vulnerabilities} across internal banking AI agents. Successfully detected critical risks including \textbf{Prompt Injection} and \textbf{Sensitive Data Disclosure}, preventing exposure prior to production.}
+    \resumeItem{Integrated banking business requirements into \textbf{DeepEval} by building custom modular classes tailored to domain-specific evaluation scenarios. Enabled systematic validation of \textbf{LLM responses} against banking metrics, ensuring accuracy and compliance across deployments.}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+  \resumeProjectHeading{\textbf{GitaBae - AI Wisdom Chatbot} $|$ \textit{Python, LangChain, Pinecone, OpenAI, Streamlit}}{Jan 2024}
+  \resumeItemListStart
+    \resumeItem{Built \textbf{RAG} pipeline using \textbf{LangChain} and \textbf{Pinecone Vector DB} to retrieve and serve contextually relevant responses from religious Gita verses, with \textbf{OpenAI} embeddings and multi-turn conversation memory.}
+    \resumeItem{Engineered content moderation middleware with \textbf{semantic similarity search}, topic filtering, and crisis detection, automatically routing sensitive queries to human support with \textbf{prompt injection} protection.}
+  \resumeItemListEnd
+  \resumeProjectHeading{\textbf{Vibe Check - AI-Powered MCP Server} $|$ \textit{Node.js, Model Context Protocol, Git API}}{Nov 2023}
+  \resumeItemListStart
+    \resumeItem{Architected a \textbf{Node.js MCP server} abstracting \textbf{Git CLI workflows} into natural language interfaces, empowering non-technical contributors to execute rebases, merges, and cherry-picks via plain English.}
+    \resumeItem{Engineered \textbf{LLM prompt chains} to parse Git diffs and generate structured, standardized release notes. Leveraged \textbf{OpenAI function calling} with multi-step chaining, achieving \textbf{95\% intent-parsing accuracy} across diverse inputs.}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeEducationEntry
+    {Indian Institute of Technology, Banaras Hindu University (IIT-BHU)}
+    {Bachelor of Technology \textnormal{--} CGPA: 8.69 / 10}
+    {Jul 2019 -- May 2023}
+    {Varanasi, UP, India}
+\resumeSubHeadingListEnd
+
+
+\end{document}
