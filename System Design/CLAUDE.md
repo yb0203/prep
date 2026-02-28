@@ -27,9 +27,9 @@ This is a conversational LLD (Low-Level Design) study system using adaptive mock
 **Current Status:**
 - **Current Level:** 1 (Foundation)
 - **Sessions Completed:** 0
-- **Topics Strong:** 0/78
+- **Topics Strong:** 1/78
 - **Topics Ok:** 0/78
-- **Topics Weak:** 0/78
+- **Topics Weak:** 1/78
 - **Next Interview Topic:** [Auto-selected by /start]
 
 **Progression Rules:**
@@ -75,7 +75,7 @@ Each interview graded on two dimensions (50/50):
 
 | Pattern | Status | Conf | Lvl | Last | Notes |
 |---------|--------|------|-----|------|-------|
-| Singleton | [ ] | — | — | — | — |
+| Singleton | [x] | strong | 1 | 2026-02-28 | Good understanding of thread safety |
 | Factory Method | [ ] | — | — | — | — |
 | Abstract Factory | [ ] | — | — | — | — |
 | Builder | [ ] | — | — | — | — |
@@ -88,7 +88,7 @@ Each interview graded on two dimensions (50/50):
 | Bridge | [ ] | — | — | — | — |
 | Flyweight | [ ] | — | — | — | — |
 | Strategy | [ ] | — | — | — | — |
-| Observer | [ ] | — | — | — | — |
+| Observer | [x] | weak | 1 | 2026-02-28 | Testing special chars with ampersand |
 | Iterator | [ ] | — | — | — | — |
 | Command | [ ] | — | — | — | — |
 | Mediator | [ ] | — | — | — | — |
