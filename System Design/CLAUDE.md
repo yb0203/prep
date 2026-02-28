@@ -27,9 +27,9 @@ This is a conversational LLD (Low-Level Design) study system using adaptive mock
 **Current Status:**
 - **Current Level:** 1 (Foundation)
 - **Sessions Completed:** 0
-- **Topics Strong:** 0/65
-- **Topics Ok:** 0/65
-- **Topics Weak:** 0/65
+- **Topics Strong:** 0/78
+- **Topics Ok:** 0/78
+- **Topics Weak:** 0/78
 - **Next Interview Topic:** [Auto-selected by /start]
 
 **Progression Rules:**
@@ -69,7 +69,7 @@ Each interview graded on two dimensions (50/50):
 
 ---
 
-## Topics — All 65
+## Topics — All 78
 
 ### Design Patterns (22) — Status | Confidence | Level | Last Interviewed | Notes
 
@@ -113,18 +113,18 @@ Each interview graded on two dimensions (50/50):
 | Interfaces | [ ] | — | — | — | — |
 | Aggregation vs Composition | [ ] | — | — | — | — |
 
-### Design Principles (8) — Status | Level | Last Interviewed | Notes
+### Design Principles (8) — Status | Confidence | Level | Last Interviewed | Notes
 
-| Principle | Status | Lvl | Last | Notes |
-|-----------|--------|-----|------|-------|
-| Single Responsibility (SRP) | [ ] | — | — | — |
-| Open/Closed (OCP) | [ ] | — | — | — |
-| Liskov Substitution (LSP) | [ ] | — | — | — |
-| Interface Segregation (ISP) | [ ] | — | — | — |
-| Dependency Inversion (DIP) | [ ] | — | — | — |
-| Don't Repeat Yourself (DRY) | [ ] | — | — | — |
-| Keep It Simple (KISS) | [ ] | — | — | — |
-| You Aren't Gonna Need It (YAGNI) | [ ] | — | — | — |
+| Principle | Status | Conf | Lvl | Last | Notes |
+|-----------|--------|------|-----|------|-------|
+| Single Responsibility (SRP) | [ ] | — | — | — | — |
+| Open/Closed (OCP) | [ ] | — | — | — | — |
+| Liskov Substitution (LSP) | [ ] | — | — | — | — |
+| Interface Segregation (ISP) | [ ] | — | — | — | — |
+| Dependency Inversion (DIP) | [ ] | — | — | — | — |
+| Don't Repeat Yourself (DRY) | [ ] | — | — | — | — |
+| Keep It Simple (KISS) | [ ] | — | — | — | — |
+| You Aren't Gonna Need It (YAGNI) | [ ] | — | — | — | — |
 
 ### Cross-Cutting Concepts (5) — Status | Confidence | Level | Last Interviewed | Notes
 
