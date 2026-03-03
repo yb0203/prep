@@ -193,4 +193,3 @@ Each interview graded on two dimensions (50/50):
 - **Levels:** 1 = Foundation, 2 = Synthesis, 3 = Design Problems, 4 = Complex Scenarios
 - **Language:** Java (default for code examples)
 - **No code files written to disk during sessions** — discussions stay conversational
-- **TTS enabled** — all responses optimized for audio with TTS_SUMMARY blocks
