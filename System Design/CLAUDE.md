@@ -6,169 +6,190 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Architecture
 
-This is a conversational LLD (Low-Level Design) study system, not a code project. Content lives in Markdown files organized by construct type:
+This is a conversational LLD (Low-Level Design) study system using adaptive mock interviews.
 
-- `principles/[name]/Theory.md` — OOP fundamentals and design principles (Theory only)
-- `patterns/[type]/[name]/{Theory,Practical,Summary}.md` — Design patterns (creational / structural / behavioral)
-- `concepts/[name]/{Theory,Practical,Summary}.md` — Cross-cutting concepts (OOP, UML, DI, Concurrency, etc.)
-- `practice/session-N/report.md` — Per-session records created by `/start`
-- `leetcodeproblems.md` — Curated problem list mapped to patterns/concepts
-- `codewitharyan.md` / `takeuforward.md` — Course curricula used as syllabus references
+**System:** Spiral Progression Interview System — Performance-based progression through 4 difficulty levels.
+- **Level 1:** Foundation — Single pattern/concept mastery
+- **Level 2:** Synthesis — Pattern pairing and interaction
+- **Level 3:** Design Problems — Full system design scenarios
+- **Level 4:** Complex Scenarios — Large-scale mastery
 
-## Commands
-
-**`/start`** (defined in `.claude/commands/start.md`) — the primary workflow command:
-1. Reads this file to determine coverage, weak topics, and session number
-2. Runs warmup drills on weak/scheduled topics (interview simulation, no hints)
-3. Teaches 2–3 new topics via Socratic dialogue
-4. Writes/updates `Theory.md`, `Practical.md`, `Summary.md` for covered topics
-5. Creates `practice/session-N/report.md` and updates tracker below
-
-**Direct topic:** Say "Let's cover [concept name]" to jump to a specific topic without `/start`.
-
-## Key Conventions
-
-- Session numbering: count `practice/session-*/` directories → N = count + 1
-- Code language when snippets arise: Java (unless user specifies otherwise)
-- Practical discussions stay conversational — no `.java` or other code files written to disk
-- Confidence updates happen immediately after each topic assessment, not batched
-- `Practical.md` must include a **LeetCode Problems** section with 1–3 relevant problems from `leetcodeproblems.md`
+**Resources:**
+- `awesome-low-level-design/` — Cloned reference repo (patterns, OOP, problems, class diagrams)
+- `patterns/`, `concepts/`, `principles/` — Theory/Practical/Summary files (written as interview side-effects)
+- `practice/session-N/report.md` — Per-session interview records
+- This file (CLAUDE.md) — Real-time progress tracker
 
 ---
 
-# LLD Knowledge Base — Progress Tracker
+## Progression Tracker (Real-Time)
 
-Status legend: `[ ]` = stub/not started · `[~]` = in progress · `[x]` = complete
+**Current Status:**
+- **Current Level:** 1 (Foundation)
+- **Sessions Completed:** 0
+- **Topics Strong:** 1/78
+- **Topics Ok:** 0/78
+- **Topics Weak:** 1/78
+- **Next Interview Topic:** [Auto-selected by /start]
 
----
-
-## Principles (Theory.md only)
-
-### OOP Fundamentals
-
-| Concept | Theory |
-|---------|--------|
-| Introduction to Classes and Objects | [ ] |
-| Class Relationships | [ ] |
-| Constructors and Types | [ ] |
-| This Keyword | [ ] |
-| Access Modifiers | [ ] |
-| Generics and Wildcards | [ ] |
-
-### OOP Pillars
-
-| Concept | Theory |
-|---------|--------|
-| Encapsulation | [ ] |
-| Abstraction | [ ] |
-| Inheritance | [ ] |
-| Polymorphism | [ ] |
-
-### Design Principles
-
-| Concept | Theory |
-|---------|--------|
-| SRP — Single Responsibility Principle | [ ] |
-| OCP — Open/Closed Principle | [ ] |
-| LSP — Liskov Substitution Principle | [ ] |
-| ISP — Interface Segregation Principle | [ ] |
-| DIP — Dependency Inversion Principle | [ ] |
-| DRY — Don't Repeat Yourself | [ ] |
-| KISS — Keep It Simple, Stupid | [ ] |
-| YAGNI — You Aren't Gonna Need It | [ ] |
+**Progression Rules:**
+- Level 1 → Level 2: Strong performance on 18+ patterns/OOP concepts
+- Level 2 → Level 3: Strong performance on 3+ pattern pair interviews
+- Level 3 → Level 4: Strong performance on 2+ design problems
+- Weak performance triggers re-interview within 2-3 sessions (no level penalty)
 
 ---
 
-## Patterns — Creational (Theory / Practical / Summary / Confidence)
+## Command
 
-| Pattern | Theory | Practical | Summary | Confidence |
-|---------|--------|-----------|---------|------------|
-| Singleton | [ ] | [ ] | [ ] | — |
-| Factory Method | [ ] | [ ] | [ ] | — |
-| Abstract Factory | [ ] | [ ] | [ ] | — |
-| Builder | [ ] | [ ] | [ ] | — |
-| Prototype | [ ] | [ ] | [ ] | — |
-
----
-
-## Patterns — Structural (Theory / Practical / Summary / Confidence)
-
-| Pattern | Theory | Practical | Summary | Confidence |
-|---------|--------|-----------|---------|------------|
-| Adapter | [ ] | [ ] | [ ] | — |
-| Decorator | [ ] | [ ] | [ ] | — |
-| Facade | [ ] | [ ] | [ ] | — |
-| Composite | [ ] | [ ] | [ ] | — |
-| Proxy | [ ] | [ ] | [ ] | — |
-| Bridge | [ ] | [ ] | [ ] | — |
-| Flyweight | [ ] | [ ] | [ ] | — |
+**`/start`** — Run a mock interview session:
+1. Analyzes progress tracker (current level, weak topics, coverage)
+2. Selects next interview topic (priority: remediation → weak reinforcement → uncovered → variety)
+3. Initializes session report
+4. Starts mock interview (opening → questioning → assessment → educator phase)
+5. Updates CLAUDE.md tracker with grade and progression status
 
 ---
 
-## Patterns — Behavioral (Theory / Practical / Summary / Confidence)
+## Interview Grading Scale
 
-| Pattern | Theory | Practical | Summary | Confidence |
-|---------|--------|-----------|---------|------------|
-| Strategy | [ ] | [ ] | [ ] | — |
-| Observer | [ ] | [ ] | [ ] | — |
-| Iterator | [ ] | [ ] | [ ] | — |
-| Command | [ ] | [ ] | [ ] | — |
-| Mediator | [ ] | [ ] | [ ] | — |
-| State | [ ] | [ ] | [ ] | — |
-| Template Method | [ ] | [ ] | [ ] | — |
-| Chain of Responsibility | [ ] | [ ] | [ ] | — |
-| Visitor | [ ] | [ ] | [ ] | — |
-| Memento | [ ] | [ ] | [ ] | — |
+Each interview graded on two dimensions (50/50):
+
+**Conceptual Understanding (50%):**
+- Weak (<60%): Missing core understanding, significant gaps
+- Ok (60-79%): Core understanding present, some gaps
+- Strong (80%+): Comprehensive understanding, articulate trade-offs
+
+**Application Skill (50%):**
+- Weak (<60%): Struggles to apply, misses obvious use cases
+- Ok (60-79%): Can apply in straightforward scenarios
+- Strong (80%+): Fluent application, anticipates edge cases
+
+**Overall Grade:** Weak, Ok, or Strong (based on average of both dimensions)
 
 ---
 
-## Concepts (Theory / Practical / Summary / Confidence)
+## Topics — All 78
 
-| Concept | Theory | Practical | Summary | Confidence |
-|---------|--------|-----------|---------|------------|
-| OOP Fundamentals | [ ] | [ ] | [ ] | — |
-| UML | [ ] | [ ] | [ ] | — |
-| Dependency Injection | [ ] | [ ] | [ ] | — |
-| Concurrency | [ ] | [ ] | [ ] | — |
-| Exception Handling | [ ] | [ ] | [ ] | — |
+### Design Patterns (22) — Status | Confidence | Level | Last Interviewed | Notes
+
+| Pattern | Status | Conf | Lvl | Last | Notes |
+|---------|--------|------|-----|------|-------|
+| Singleton | [x] | strong | 1 | 2026-02-28 | Good understanding of thread safety |
+| Factory Method | [ ] | — | — | — | — |
+| Abstract Factory | [ ] | — | — | — | — |
+| Builder | [ ] | — | — | — | — |
+| Prototype | [ ] | — | — | — | — |
+| Adapter | [ ] | — | — | — | — |
+| Decorator | [ ] | — | — | — | — |
+| Facade | [ ] | — | — | — | — |
+| Composite | [ ] | — | — | — | — |
+| Proxy | [ ] | — | — | — | — |
+| Bridge | [ ] | — | — | — | — |
+| Flyweight | [ ] | — | — | — | — |
+| Strategy | [ ] | — | — | — | — |
+| Observer | [x] | weak | 1 | 2026-02-28 | Testing special chars with ampersand |
+| Iterator | [ ] | — | — | — | — |
+| Command | [ ] | — | — | — | — |
+| Mediator | [ ] | — | — | — | — |
+| State | [ ] | — | — | — | — |
+| Template Method | [ ] | — | — | — | — |
+| Chain of Responsibility | [ ] | — | — | — | — |
+| Visitor | [ ] | — | — | — | — |
+| Memento | [ ] | — | — | — | — |
+
+### OOP Concepts (10) — Status | Confidence | Level | Last Interviewed | Notes
+
+| Concept | Status | Conf | Lvl | Last | Notes |
+|---------|--------|------|-----|------|-------|
+| Classes and Objects | [ ] | — | — | — | — |
+| Encapsulation | [ ] | — | — | — | — |
+| Abstraction | [ ] | — | — | — | — |
+| Inheritance | [ ] | — | — | — | — |
+| Polymorphism | [ ] | — | — | — | — |
+| Composition | [ ] | — | — | — | — |
+| Aggregation | [ ] | — | — | — | — |
+| Association | [ ] | — | — | — | — |
+| Interfaces | [ ] | — | — | — | — |
+| Aggregation vs Composition | [ ] | — | — | — | — |
+
+### Design Principles (8) — Status | Confidence | Level | Last Interviewed | Notes
+
+| Principle | Status | Conf | Lvl | Last | Notes |
+|-----------|--------|------|-----|------|-------|
+| Single Responsibility (SRP) | [ ] | — | — | — | — |
+| Open/Closed (OCP) | [ ] | — | — | — | — |
+| Liskov Substitution (LSP) | [ ] | — | — | — | — |
+| Interface Segregation (ISP) | [ ] | — | — | — | — |
+| Dependency Inversion (DIP) | [ ] | — | — | — | — |
+| Don't Repeat Yourself (DRY) | [ ] | — | — | — | — |
+| Keep It Simple (KISS) | [ ] | — | — | — | — |
+| You Aren't Gonna Need It (YAGNI) | [ ] | — | — | — | — |
+
+### Cross-Cutting Concepts (5) — Status | Confidence | Level | Last Interviewed | Notes
+
+| Concept | Status | Conf | Lvl | Last | Notes |
+|---------|--------|------|-----|------|-------|
+| OOP Fundamentals | [ ] | — | — | — | — |
+| UML | [ ] | — | — | — | — |
+| Dependency Injection | [ ] | — | — | — | — |
+| Concurrency | [ ] | — | — | — | — |
+| Exception Handling | [ ] | — | — | — | — |
+
+### Design Problems (33) — Status | Level | Last Interviewed | Notes
+
+| Problem | Status | Lvl | Last | Notes |
+|---------|--------|-----|------|-------|
+| ATM | [ ] | — | — | — |
+| Parking Lot | [ ] | — | — | — |
+| Elevator System | [ ] | — | — | — |
+| Hotel Management System | [ ] | — | — | — |
+| Library Management System | [ ] | — | — | — |
+| Movie Ticket Booking System | [ ] | — | — | — |
+| Airline Management System | [ ] | — | — | — |
+| Concert Ticket Booking System | [ ] | — | — | — |
+| Course Registration System | [ ] | — | — | — |
+| Cricinfo | [ ] | — | — | — |
+| Digital Wallet Service | [ ] | — | — | — |
+| Food Delivery Service | [ ] | — | — | — |
+| Chess Game | [ ] | — | — | — |
+| Coffee Vending Machine | [ ] | — | — | — |
+| Car Rental System | [ ] | — | — | — |
+| Logging Framework | [ ] | — | — | — |
+| LRU Cache | [ ] | — | — | — |
+| Online Auction System | [ ] | — | — | — |
+| Online Shopping Service | [ ] | — | — | — |
+| Online Stock Brokerage System | [ ] | — | — | — |
+| Ride Sharing Service | [ ] | — | — | — |
+| Snake and Ladder | [ ] | — | — | — |
+| Music Streaming Service | [ ] | — | — | — |
+| Stack Overflow | [ ] | — | — | — |
+| Task Management System | [ ] | — | — | — |
+| Tic Tac Toe | [ ] | — | — | — |
+| Traffic Signal | [ ] | — | — | — |
+| Vending Machine | [ ] | — | — | — |
+| Restaurant Management System | [ ] | — | — | — |
+| Social Networking Service | [ ] | — | — | — |
+| Pub Sub System | [ ] | — | — | — |
+| Splitwise | [ ] | — | — | — |
 
 ---
 
 ## How to Use
 
-- Run `/start` to automatically pick the next uncovered topic and begin a full study session
-- Or say "Let's cover [concept name]" to jump to a specific topic
-- Claude teaches conversationally, writes the files, quizzes you, then updates this tracker
-- Status: `[ ]` → `[~]` (in progress) → `[x]` (complete)
-- Confidence (patterns & concepts only): `—` (not covered) → `weak` → `ok` → `strong`
-  - `weak` → auto-queued in next session's warmup drill
-  - `ok` → revisited every 3 sessions
-  - `strong` → stable, not scheduled
+- Run `/start` to begin a mock interview session
+- System automatically selects next topic based on progression algorithm
+- Interview covers: opening → questioning phase → assessment → educator phase
+- Grade recorded, tracker updated, session report created
+- Theory/Practical/Summary files written/updated as side-effects
+- Repeat until you reach Level 4 mastery
 
 ---
 
-## LeetCode Problems Integration
+## Notes
 
-**File:** `leetcodeproblems.md` at this directory root contains a curated list of LLD design problems.
-
-**Rule:** Every `Practical.md` file (for patterns and concepts) must include a **LeetCode Problems** section that maps 1–3 relevant problems from `leetcodeproblems.md` to the topic. Claude selects the most relevant problems when writing Practical.md during a `/start` session.
-
-**Mapping guidance:**
-- Iterator pattern → #173, #251, #281, #284, #341, #604, #900, #1286
-- Observer / Event-driven → #355 Design Twitter, #362 Design Hit Counter
-- Singleton → applicable across many design problems (logging, caches)
-- Builder → #1628 Expression Tree, #2408 Design SQL
-- Factory → #588 In-Memory File System, #1166 Design File System
-- Proxy → #146 LRU Cache, #460 LFU Cache
-- Decorator → #1381 Stack with Increment, #1670 Front Middle Back Queue
-- Facade → #1396 Underground System, #2241 ATM Machine
-- Strategy → #384 Shuffle an Array, #855 Exam Room
-- State → #353 Design Snake Game, #729 My Calendar I
-- Command → #1472 Design Browser History, #2590 Design a Todo List
-- Memento → #1472 Design Browser History
-- Chain of Responsibility → #359 Logger Rate Limiter, #1797 Authentication Manager
-- Composite → #341 Flatten Nested List Iterator, #431 Encode N-ary Tree
-- Flyweight → #146 LRU Cache (shared state optimization)
-- Bridge / Adapter → #271 Encode and Decode Strings, #535 Encode and Decode TinyURL
-- Concurrency → #362 Hit Counter, #981 Time Based Key-Value Store, #1146 Snapshot Array
-- OOP Fundamentals → #706 Design HashMap, #705 Design HashSet, #707 Design Linked List
+- **Status Legend:** `[ ]` = not started, `[~]` = in progress, `[x]` = completed (strong)
+- **Confidence Legend:** `—` = not covered, `weak` = weak performance, `ok` = moderate, `strong` = strong
+- **Levels:** 1 = Foundation, 2 = Synthesis, 3 = Design Problems, 4 = Complex Scenarios
+- **Language:** Java (default for code examples)
+- **No code files written to disk during sessions** — discussions stay conversational
